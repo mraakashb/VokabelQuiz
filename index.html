@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deutsch Vokabelquiz – Alle Kapitel</title>
+    <meta name="description" content="Interactive German vocabulary quiz – 4500+ words across Chap, Kapi, Lek, Prac and Class sections.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-particles" id="bgParticles"></div>
+
+    <!-- ============ START SCREEN ============ -->
+    <div class="screen active" id="startScreen">
+        <div class="start-container">
+            <div class="logo-badge"><span class="logo-icon">🇩🇪</span></div>
+            <h1 class="start-title">Vokabel<span class="accent">Quiz</span></h1>
+            <p class="start-subtitle">4.500+ Wörter · 71 Abschnitte</p>
+
+            <!-- Category Tabs -->
+            <div class="category-tabs" id="categoryTabs">
+                <button class="cat-tab active" data-cat="Chap">📖 Chap</button>
+                <button class="cat-tab" data-cat="Kapi">📗 Kapi</button>
+                <button class="cat-tab" data-cat="Lek">📘 Lek</button>
+                <button class="cat-tab" data-cat="Prac">📙 Prac</button>
+                <button class="cat-tab" data-cat="Class">📕 Class</button>
+            </div>
+
+            <!-- Chapter Grids (one per category, toggled by tabs) -->
+            <div class="chapter-panel active" id="panel-Chap">
+                <div class="panel-header">
+                    <span class="panel-title">Schritte · Chapters 1–12</span>
+                    <button class="select-all-btn" data-cat="Chap">Alle auswählen</button>
+                </div>
+                <div class="chapter-grid" id="grid-Chap"></div>
+            </div>
+            <div class="chapter-panel" id="panel-Kapi">
+                <div class="panel-header">
+                    <span class="panel-title">Kapitel 1–12</span>
+                    <button class="select-all-btn" data-cat="Kapi">Alle auswählen</button>
+                </div>
+                <div class="chapter-grid" id="grid-Kapi"></div>
+            </div>
+            <div class="chapter-panel" id="panel-Lek">
+                <div class="panel-header">
+                    <span class="panel-title">Aspekte · Lektion 1–12 + Kombiniert</span>
+                    <button class="select-all-btn" data-cat="Lek">Alle auswählen</button>
+                </div>
+                <div class="chapter-grid" id="grid-Lek"></div>
+            </div>
+            <div class="chapter-panel" id="panel-Prac">
+                <div class="panel-header">
+                    <span class="panel-title">Practice Sessions 1–13</span>
+                    <button class="select-all-btn" data-cat="Prac">Alle auswählen</button>
+                </div>
+                <div class="chapter-grid" id="grid-Prac"></div>
+            </div>
+            <div class="chapter-panel" id="panel-Class">
+                <div class="panel-header">
+                    <span class="panel-title">Class Notes 1–18</span>
+                    <button class="select-all-btn" data-cat="Class">Alle auswählen</button>
+                </div>
+                <div class="chapter-grid" id="grid-Class"></div>
+            </div>
+
+            <!-- Selection Info -->
+            <div class="selection-info hidden" id="selectionInfo">
+                <span class="selection-label" id="selectionLabel"></span>
+                <span class="selection-dot">·</span>
+                <span class="selection-count" id="selectionCount"></span>
+            </div>
+
+            <!-- Mode -->
+            <div class="mode-selector">
+                <h3 class="section-label">Quizmodus</h3>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="de-en" id="modeDeEn">
+                        <span class="mode-emoji">🇩🇪 → 🇬🇧</span>
+                        <span class="mode-text">Deutsch → English</span>
+                    </button>
+                    <button class="mode-btn" data-mode="en-de" id="modeEnDe">
+                        <span class="mode-emoji">🇬🇧 → 🇩🇪</span>
+                        <span class="mode-text">English → Deutsch</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Word Limit -->
+            <div class="limit-selector">
+                <h3 class="section-label">Anzahl der Fragen</h3>
+                <div class="limit-buttons" id="limitButtons">
+                    <button class="limit-btn" data-limit="10">10</button>
+                    <button class="limit-btn" data-limit="20">20</button>
+                    <button class="limit-btn" data-limit="30">30</button>
+                    <button class="limit-btn" data-limit="50">50</button>
+                    <button class="limit-btn active" data-limit="all">Alle</button>
+                </div>
+            </div>
+
+            <button class="start-btn disabled" id="startBtn">
+                <span>Quiz starten</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============ QUIZ SCREEN ============ -->
+    <div class="screen" id="quizScreen">
+        <div class="quiz-container">
+            <div class="quiz-top-bar">
+                <button class="back-btn" id="backBtn" title="Zurück">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <div class="quiz-chapter-label" id="quizChapterLabel"></div>
+            </div>
+            <div class="progress-bar-wrapper"><div class="progress-bar" id="progressBar"></div></div>
+            <div class="quiz-header">
+                <div class="question-counter" id="questionCounter">1 / 20</div>
+                <div class="score-display">
+                    <span class="score-correct" id="scoreCorrect">0</span>
+                    <span class="score-divider">/</span>
+                    <span class="score-wrong" id="scoreWrong">0</span>
+                </div>
+            </div>
+            <div class="question-card" id="questionCard">
+                <div class="gender-badge" id="genderBadge"></div>
+                <div class="question-word" id="questionWord"></div>
+                <div class="question-hint" id="questionHint"></div>
+            </div>
+            <div class="options-grid" id="optionsGrid"></div>
+            <div class="feedback-overlay" id="feedbackOverlay">
+                <div class="feedback-icon" id="feedbackIcon"></div>
+                <div class="feedback-text" id="feedbackText"></div>
+            </div>
+            <button class="next-btn hidden" id="nextBtn">
+                <span>Nächste Frage</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============ RESULTS SCREEN ============ -->
+    <div class="screen" id="resultsScreen">
+        <div class="results-container">
+            <div class="results-emoji" id="resultsEmoji">🎉</div>
+            <h2 class="results-title" id="resultsTitle">Fantastisch!</h2>
+            <p class="results-subtitle" id="resultsSubtitle"></p>
+            <div class="results-ring-wrapper">
+                <svg class="results-ring" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="12"/>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="url(#ringGrad)" stroke-width="12"
+                        stroke-linecap="round" id="ringProgress"
+                        stroke-dasharray="534" stroke-dashoffset="534" transform="rotate(-90 100 100)"/>
+                    <defs>
+                        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#6366f1"/>
+                            <stop offset="100%" stop-color="#a78bfa"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="results-percent" id="resultsPercent">0%</div>
+            </div>
+            <div class="results-stats">
+                <div class="result-stat correct">
+                    <span class="result-stat-num" id="finalCorrect">0</span>
+                    <span class="result-stat-label">Richtig</span>
+                </div>
+                <div class="result-stat wrong">
+                    <span class="result-stat-num" id="finalWrong">0</span>
+                    <span class="result-stat-label">Falsch</span>
+                </div>
+                <div class="result-stat total">
+                    <span class="result-stat-num" id="finalTotal">20</span>
+                    <span class="result-stat-label">Gesamt</span>
+                </div>
+            </div>
+            <div class="missed-section hidden" id="missedSection">
+                <h3 class="missed-title">📝 Zum Wiederholen</h3>
+                <div class="missed-list" id="missedList"></div>
+            </div>
+            <div class="results-actions">
+                <button class="restart-btn" id="restartBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                    <span>Nochmal spielen</span>
+                </button>
+                <button class="action-btn-secondary" id="switchModeBtn">🔄 Modus wechseln</button>
+                <button class="action-btn-secondary" id="homeBtn">🏠 Zurück zur Auswahl</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="vocab_data.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
