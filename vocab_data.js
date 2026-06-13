@@ -103,6 +103,11 @@ const ALL_VOCAB_DATA = {
   ],
   "Chap 2": [
     {
+      "word": "Mitarbeiter-in",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
       "word": "Zeugnis",
       "meaning": "transcript",
       "gender": "das"
@@ -121,6 +126,11 @@ const ALL_VOCAB_DATA = {
       "word": "Vorlesung",
       "meaning": "lecture",
       "gender": "die"
+    },
+    {
+      "word": "jobben",
+      "meaning": "gejobbt",
+      "gender": null
     },
     {
       "word": "Ausflug-Ausflüge",
@@ -266,6 +276,11 @@ const ALL_VOCAB_DATA = {
       "word": "entscheiden",
       "meaning": "to decide",
       "gender": null
+    },
+    {
+      "word": "Entscheidung",
+      "meaning": "",
+      "gender": "die"
     },
     {
       "word": "achten",
@@ -1201,6 +1216,11 @@ const ALL_VOCAB_DATA = {
       "gender": "der"
     },
     {
+      "word": "Schild",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
       "word": "Schaffer-in",
       "meaning": "conductor, controller, tt",
       "gender": "der-die"
@@ -1654,6 +1674,11 @@ const ALL_VOCAB_DATA = {
     }
   ],
   "Chap 8": [
+    {
+      "word": "Schrift",
+      "meaning": "",
+      "gender": "die"
+    },
     {
       "word": "Segelstunde",
       "meaning": "Sailing lessons",
@@ -2244,6 +2269,11 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Treppenhaus",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "Dach",
       "meaning": "Roof",
       "gender": "das"
@@ -2693,6 +2723,11 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Musikstil",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
       "word": "Wortschlange",
       "meaning": "Word snake, queue, line",
       "gender": "die"
@@ -2758,6 +2793,11 @@ const ALL_VOCAB_DATA = {
       "gender": "der"
     },
     {
+      "word": "Königreich",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
       "word": "Verfilmung",
       "meaning": "filming",
       "gender": "die"
@@ -2781,6 +2821,11 @@ const ALL_VOCAB_DATA = {
       "word": "verschlafen",
       "meaning": "overslept",
       "gender": null
+    },
+    {
+      "word": "Schnäppchen",
+      "meaning": "",
+      "gender": "das"
     },
     {
       "word": "Ausblick",
@@ -3324,6 +3369,11 @@ const ALL_VOCAB_DATA = {
       "gender": "das"
     },
     {
+      "word": "Suchtext or die Suchanziege posten",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
       "word": "Kleinanzeigen",
       "meaning": "Classifieds, small ads",
       "gender": "die"
@@ -3366,6 +3416,16 @@ const ALL_VOCAB_DATA = {
     {
       "word": "vorh.",
       "meaning": "Vorhanden",
+      "gender": null
+    },
+    {
+      "word": "Kaut.",
+      "meaning": "Kaution",
+      "gender": "die"
+    },
+    {
+      "word": "v.priv",
+      "meaning": "von Privat",
       "gender": null
     },
     {
@@ -3552,6 +3612,11 @@ const ALL_VOCAB_DATA = {
       "word": "belaufen",
       "meaning": "amounts to",
       "gender": "sich"
+    },
+    {
+      "word": "Zimmer",
+      "meaning": "",
+      "gender": "das"
     },
     {
       "word": "dringend",
@@ -5378,6 +5443,21 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Körperschmerzen",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Nackenschmerzen",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Husten",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
       "word": "schlapp",
       "meaning": "tired",
       "gender": null
@@ -5406,6 +5486,11 @@ const ALL_VOCAB_DATA = {
       "word": "erkälten",
       "meaning": "to catch a cold",
       "gender": "sich"
+    },
+    {
+      "word": "erkältet sein",
+      "meaning": "have a cold",
+      "gender": null
     },
     {
       "word": "entzünden",
@@ -6290,6 +6375,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "Beschenkte-n",
+      "meaning": "",
+      "gender": "der-die"
+    },
+    {
       "word": "kostbar",
       "meaning": "precious",
       "gender": null
@@ -6464,6 +6554,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "Schnuppertraining",
       "meaning": "Trail training",
+      "gender": "das"
+    },
+    {
+      "word": "Probetraining",
+      "meaning": "",
       "gender": "das"
     },
     {
@@ -6642,6 +6737,11 @@ const ALL_VOCAB_DATA = {
       "word": "anregen",
       "meaning": "to excite, encourage",
       "gender": null
+    },
+    {
+      "word": "Frühstücksbüffet",
+      "meaning": "",
+      "gender": "das"
     },
     {
       "word": "umzählig",
@@ -7104,6 +7204,11 @@ const ALL_VOCAB_DATA = {
       "gender": "der"
     },
     {
+      "word": "Rodelbahn",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "rodeln",
       "meaning": "schlittenfahren",
       "gender": null
@@ -7203,6 +7308,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "vergessen",
       "meaning": "to forget",
+      "gender": null
+    },
+    {
+      "word": "versprechen",
+      "meaning": "versprochen",
       "gender": null
     },
     {
@@ -7457,6 +7567,11 @@ const ALL_VOCAB_DATA = {
     }
   ],
   "Lek 3": [
+    {
+      "word": "Klimawandel",
+      "meaning": "",
+      "gender": "der"
+    },
     {
       "word": "schädigen",
       "meaning": "to damage",
@@ -7875,6 +7990,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "Möbelhaus",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
       "word": "wetterfest",
       "meaning": "weatherproof",
       "gender": null
@@ -8150,6 +8270,11 @@ const ALL_VOCAB_DATA = {
       "gender": "der"
     },
     {
+      "word": "Aprilscherz",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
       "word": "auspacken",
       "meaning": "to unpack sth",
       "gender": null
@@ -8342,6 +8467,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "Witz-e",
+      "meaning": "",
+      "gender": "der-die"
+    },
+    {
       "word": "Roman",
       "meaning": "Novel",
       "gender": "der"
@@ -8380,6 +8510,21 @@ const ALL_VOCAB_DATA = {
       "word": "Absicht",
       "meaning": "Intention",
       "gender": "die"
+    },
+    {
+      "word": "Mehrheit, Minderheit, Hälfte",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Eindrittel, zwei, ein Viertel",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "Kriterium, Kriterien",
+      "meaning": "",
+      "gender": "das-die"
     },
     {
       "word": "empfinden",
@@ -8437,9 +8582,54 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Wintersport",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "Boxen",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "Skispringen",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "Leichtathletik",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Eiskunstlauf",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
+      "word": "Akrobatik",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
       "word": "Aerobic",
       "meaning": "Aerobics",
       "gender": "das"
+    },
+    {
+      "word": "EM, WM- Europameisterschafts, Welt",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Qualifikationsspiel",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "unentschieden",
+      "meaning": "",
+      "gender": null
     },
     {
       "word": "Tor",
@@ -8573,6 +8763,11 @@ const ALL_VOCAB_DATA = {
     }
   ],
   "Lek 6": [
+    {
+      "word": "Prinz, Prinzessin",
+      "meaning": "",
+      "gender": "der"
+    },
     {
       "word": "Eule",
       "meaning": "Owl",
@@ -8727,6 +8922,11 @@ const ALL_VOCAB_DATA = {
       "word": "zeitsparend",
       "meaning": "time saving",
       "gender": null
+    },
+    {
+      "word": "Medaillen",
+      "meaning": "",
+      "gender": "die"
     },
     {
       "word": "Auto rennen",
@@ -9145,6 +9345,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "fertigen",
       "meaning": "to make, manufacture",
+      "gender": null
+    },
+    {
+      "word": "anfertigen",
+      "meaning": "",
       "gender": null
     },
     {
@@ -9692,6 +9897,21 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "kalorienreich",
+      "meaning": "kalorienarm",
+      "gender": null
+    },
+    {
+      "word": "Reich",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "Arm",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
       "word": "Frucht-üchte",
       "meaning": "Fruits",
       "gender": "die"
@@ -9864,8 +10084,18 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "verbrennen",
+      "meaning": "verbrannt",
+      "gender": null
+    },
+    {
       "word": "brennen",
       "meaning": "to burn",
+      "gender": null
+    },
+    {
+      "word": "anbrennen",
+      "meaning": "used beim kochen ,, on topf",
       "gender": null
     },
     {
@@ -9939,6 +10169,11 @@ const ALL_VOCAB_DATA = {
       "gender": "der"
     },
     {
+      "word": "Risiko, Risiken",
+      "meaning": "",
+      "gender": "das-die"
+    },
+    {
       "word": "absichern",
       "meaning": "to secure, protect",
       "gender": null
@@ -9974,9 +10209,19 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Hundhaftpflichtversicherung",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
       "word": "ausüben",
       "meaning": "to exercise, have practice",
       "gender": null
+    },
+    {
+      "word": "Berufsunfähigkeitversicherung",
+      "meaning": "",
+      "gender": "die"
     },
     {
       "word": "überversichern",
@@ -10224,6 +10469,11 @@ const ALL_VOCAB_DATA = {
       "gender": "das"
     },
     {
+      "word": "quietschen",
+      "meaning": "gequietscht",
+      "gender": null
+    },
+    {
       "word": "Autokennzeichnen",
       "meaning": "License Plate",
       "gender": "das"
@@ -10353,6 +10603,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "Hosentasche",
       "meaning": "Trouser, Pocket",
+      "gender": "die"
+    },
+    {
+      "word": "Prüfungsangst",
+      "meaning": "",
       "gender": "die"
     },
     {
@@ -10833,6 +11088,11 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Macroalgen",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
       "word": "Kettenmails",
       "meaning": "Chain mails",
       "gender": "die"
@@ -11088,6 +11348,11 @@ const ALL_VOCAB_DATA = {
       "word": "einigen",
       "meaning": "to agree",
       "gender": "sich"
+    },
+    {
+      "word": "Briefträger-in",
+      "meaning": "",
+      "gender": "der-die"
     },
     {
       "word": "Inserat",
@@ -12395,6 +12660,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "Dunstabzugshaube",
       "meaning": "Chimmney",
+      "gender": "die"
+    },
+    {
+      "word": "Tiefkühltruhe",
+      "meaning": "",
       "gender": "die"
     },
     {
@@ -14657,6 +14927,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "Klimabilanz",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
       "word": "demnach",
       "meaning": "therefore",
       "gender": null
@@ -14777,6 +15052,11 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "erzeugen",
+      "meaning": "to produce sth, to create sth",
+      "gender": null
+    },
+    {
       "word": "Verkaufsaktionen",
       "meaning": "Sales Promotion",
       "gender": "die"
@@ -14795,6 +15075,11 @@ const ALL_VOCAB_DATA = {
       "word": "Abschaffung",
       "meaning": "Abolition, Removal",
       "gender": "die"
+    },
+    {
+      "word": "abschaffen",
+      "meaning": "to suppress, eliminate, abolish",
+      "gender": null
     },
     {
       "word": "beibehalten",
@@ -15396,6 +15681,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "addieren",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "Brüche oder Prozente",
       "meaning": "Fractions or Percentages",
       "gender": null
@@ -15836,6 +16126,11 @@ const ALL_VOCAB_DATA = {
       "word": "aufheitern",
       "meaning": "to exhilarate, cheer",
       "gender": null
+    },
+    {
+      "word": "Eierschalensollbruchstellenverursacher",
+      "meaning": "",
+      "gender": "der"
     }
   ],
   "Prac 13": [
@@ -15895,9 +16190,9 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
-      "word": "die",
-      "meaning": "Lautstärke",
-      "gender": null
+      "word": "Lautstärke",
+      "meaning": "Loudness, sound intensity",
+      "gender": "die"
     },
     {
       "word": "aufwiegen",
@@ -16362,6 +16657,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "egotisch",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "selbstlos",
       "meaning": "selflessly",
       "gender": null
@@ -16507,7 +16807,7 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
-      "word": "verzörgen",
+      "word": "verzögern",
       "meaning": "to delay, decelerate",
       "gender": null
     },
@@ -17228,6 +17528,11 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Water body",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
       "word": "Zigarettenkippe",
       "meaning": "Cigarette butt",
       "gender": "die"
@@ -17939,6 +18244,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "befassen",
       "meaning": "to deal with",
+      "gender": null
+    },
+    {
+      "word": "topfit",
+      "meaning": "",
       "gender": null
     },
     {
@@ -18709,6 +19019,11 @@ const ALL_VOCAB_DATA = {
       "word": "ins Leben rufen",
       "meaning": "etwas gründen",
       "gender": null
+    },
+    {
+      "word": "einen guten Rutsch ins Neuejahr",
+      "meaning": "",
+      "gender": null
     }
   ],
   "Class 9": [
@@ -19257,8 +19572,8 @@ const ALL_VOCAB_DATA = {
       "gender": "das"
     },
     {
-      "word": "zörgern",
-      "meaning": "to hesitate",
+      "word": "zögern",
+      "meaning": "to hesitate, to procrastinate",
       "gender": null
     },
     {
@@ -19969,6 +20284,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "aufbinden",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "hineinschlüpfen",
       "meaning": "to slip in",
       "gender": null
@@ -20079,6 +20399,11 @@ const ALL_VOCAB_DATA = {
       "gender": "der"
     },
     {
+      "word": "Kuh",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
       "word": "Kalb",
       "meaning": "Calf",
       "gender": "das"
@@ -20094,9 +20419,49 @@ const ALL_VOCAB_DATA = {
       "gender": "das"
     },
     {
+      "word": "Hammel",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
+      "word": "Schaf",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "Lamm",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "blöken",
+      "meaning": "geblökt",
+      "gender": null
+    },
+    {
       "word": "Hund-e",
       "meaning": "dog",
       "gender": "der"
+    },
+    {
+      "word": "Rüde",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
+      "word": "Hündin",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Welpe",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
+      "word": "bellen",
+      "meaning": "",
+      "gender": null
     },
     {
       "word": "Katze-n",
@@ -20104,9 +20469,49 @@ const ALL_VOCAB_DATA = {
       "gender": "die"
     },
     {
+      "word": "Kater",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
+      "word": "Katze",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Kätzchen",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "miauen",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "Huhn-ühner",
       "meaning": "Hen",
       "gender": "das"
+    },
+    {
+      "word": "Hahn",
+      "meaning": "",
+      "gender": "der"
+    },
+    {
+      "word": "Henne",
+      "meaning": "",
+      "gender": "die"
+    },
+    {
+      "word": "Kücken",
+      "meaning": "",
+      "gender": "das"
+    },
+    {
+      "word": "krähen, gackern",
+      "meaning": "",
+      "gender": null
     }
   ],
   "Class 13": [
@@ -20635,6 +21040,11 @@ const ALL_VOCAB_DATA = {
     {
       "word": "Prügel",
       "meaning": "Floggings",
+      "gender": "die"
+    },
+    {
+      "word": "Prügelei",
+      "meaning": "",
       "gender": "die"
     },
     {
@@ -21732,6 +22142,11 @@ const ALL_VOCAB_DATA = {
       "gender": null
     },
     {
+      "word": "die Augenbrauen zusammenziehen",
+      "meaning": "",
+      "gender": null
+    },
+    {
       "word": "verschränken",
       "meaning": "to entangle, to cross sth",
       "gender": null
@@ -22554,6 +22969,1682 @@ const ALL_VOCAB_DATA = {
       "word": "belegen",
       "meaning": "to document, to reserve, to prove sth",
       "gender": null
+    }
+  ],
+  "Class 19": [
+    {
+      "word": "aufbrechen",
+      "meaning": "to leave, to start, to break, to set off",
+      "gender": null
+    },
+    {
+      "word": "unterirdisch",
+      "meaning": "subsurface, underground",
+      "gender": null
+    },
+    {
+      "word": "promoviern",
+      "meaning": "to do a doctorate, to receive a PhD",
+      "gender": null
+    },
+    {
+      "word": "Wagnis",
+      "meaning": "risk, Venture, hazard, gamble",
+      "gender": "das"
+    },
+    {
+      "word": "einfließen",
+      "meaning": "to flow in, to pour in",
+      "gender": null
+    },
+    {
+      "word": "dinglich",
+      "meaning": "real",
+      "gender": null
+    },
+    {
+      "word": "Kurzschlussreaktion",
+      "meaning": "Knee jerk reaction",
+      "gender": null
+    },
+    {
+      "word": "umgeben",
+      "meaning": "to surround, to encompass",
+      "gender": null
+    },
+    {
+      "word": "sandig",
+      "meaning": "sandy",
+      "gender": null
+    },
+    {
+      "word": "widmen",
+      "meaning": "to dedicate so to sth",
+      "gender": null
+    },
+    {
+      "word": "Klausur",
+      "meaning": "exam, test",
+      "gender": "die"
+    },
+    {
+      "word": "Einsturz",
+      "meaning": "Collapse",
+      "gender": "der"
+    },
+    {
+      "word": "Schrottplatz",
+      "meaning": "scrapyard, Junkyard",
+      "gender": "der"
+    },
+    {
+      "word": "Entzugsklinik",
+      "meaning": "Rehab center",
+      "gender": "die"
+    },
+    {
+      "word": "unumgänglich",
+      "meaning": "inevitable",
+      "gender": null
+    },
+    {
+      "word": "besteuern",
+      "meaning": "to rate, to tax",
+      "gender": null
+    },
+    {
+      "word": "verätzen",
+      "meaning": "to burn sth, to corrode sth",
+      "gender": null
+    },
+    {
+      "word": "unterkriegen",
+      "meaning": "to get down",
+      "gender": null
+    },
+    {
+      "word": "Altersfreigabe",
+      "meaning": "age rating",
+      "gender": "die"
+    },
+    {
+      "word": "Entstehungsgeschichte",
+      "meaning": "Evolutionary history, history of origin",
+      "gender": "die"
+    },
+    {
+      "word": "einvernehmlich",
+      "meaning": "amicable, understood, mutual",
+      "gender": null
+    },
+    {
+      "word": "Unbehagen",
+      "meaning": "discomfort, unease",
+      "gender": "das"
+    },
+    {
+      "word": "straffälig",
+      "meaning": "criminal",
+      "gender": null
+    },
+    {
+      "word": "neigen",
+      "meaning": "to lean, to tend to sth",
+      "gender": null
+    },
+    {
+      "word": "Nachschlagewerk",
+      "meaning": "reference work",
+      "gender": "das"
+    },
+    {
+      "word": "Leseausweis",
+      "meaning": "Library card",
+      "gender": "der"
+    },
+    {
+      "word": "Menschenhandel",
+      "meaning": "Human trafficking",
+      "gender": "der"
+    },
+    {
+      "word": "düster",
+      "meaning": "gloomy, dark",
+      "gender": null
+    },
+    {
+      "word": "Eitelkeit",
+      "meaning": "Vanity",
+      "gender": "die"
+    },
+    {
+      "word": "abmahnen",
+      "meaning": "to serve notice",
+      "gender": null
+    },
+    {
+      "word": "einschlagen",
+      "meaning": "to bang sth",
+      "gender": null
+    },
+    {
+      "word": "Juwelierladen",
+      "meaning": "Jewelers shop",
+      "gender": "der"
+    },
+    {
+      "word": "verlaufen",
+      "meaning": "to continue, to proceed, to deviate",
+      "gender": null
+    },
+    {
+      "word": "ertappen",
+      "meaning": "to catch so",
+      "gender": null
+    },
+    {
+      "word": "jmdn. auf frischer Tat ertappen",
+      "meaning": "to catch so. red handed",
+      "gender": null
+    },
+    {
+      "word": "Förster",
+      "meaning": "Forest ranger",
+      "gender": "der"
+    },
+    {
+      "word": "unterlassen",
+      "meaning": "to neglect, to fail to do sth",
+      "gender": null
+    },
+    {
+      "word": "Hilfeleistung",
+      "meaning": "assistance",
+      "gender": "die"
+    },
+    {
+      "word": "Unikum",
+      "meaning": "Unique",
+      "gender": "das"
+    },
+    {
+      "word": "übergreifen",
+      "meaning": "to encroach on sth",
+      "gender": null
+    },
+    {
+      "word": "gleten",
+      "meaning": "to apply, to count",
+      "gender": null
+    },
+    {
+      "word": "Medienrummel",
+      "meaning": "Hype",
+      "gender": "der"
+    },
+    {
+      "word": "qualvoll",
+      "meaning": "distressfull",
+      "gender": null
+    },
+    {
+      "word": "Insasse",
+      "meaning": "Inhabitant, occupant",
+      "gender": "der"
+    },
+    {
+      "word": "Rüstungsgüter",
+      "meaning": "Military hardware, equipments",
+      "gender": "die"
+    },
+    {
+      "word": "versagen",
+      "meaning": "to fail, collapse, malfunction",
+      "gender": null
+    },
+    {
+      "word": "verfallen",
+      "meaning": "to decay, deteriorate",
+      "gender": null
+    },
+    {
+      "word": "Lösegeld",
+      "meaning": "ransom",
+      "gender": "das"
+    },
+    {
+      "word": "Täuschung",
+      "meaning": "deceit, deception",
+      "gender": "die"
+    },
+    {
+      "word": "Unterscheidungsmerkmal",
+      "meaning": "Distinguishing features",
+      "gender": "das"
+    },
+    {
+      "word": "nahestehend",
+      "meaning": "close",
+      "gender": null
+    },
+    {
+      "word": "Tagesordnungspunkt",
+      "meaning": "der TOP the Agenda item",
+      "gender": "der"
+    },
+    {
+      "word": "Unterlassung",
+      "meaning": "Omission, default",
+      "gender": null
+    },
+    {
+      "word": "darlegen",
+      "meaning": "to state, to give a summary of",
+      "gender": null
+    },
+    {
+      "word": "aufgeschlossen",
+      "meaning": "open-minded",
+      "gender": null
+    },
+    {
+      "word": "beaufsichtigen",
+      "meaning": "to proctor, monitor",
+      "gender": null
+    },
+    {
+      "word": "Werdegang",
+      "meaning": "development, career",
+      "gender": "der"
+    },
+    {
+      "word": "bedenken",
+      "meaning": "to consider, to bear sth in mind",
+      "gender": null
+    },
+    {
+      "word": "penibel",
+      "meaning": "picky",
+      "gender": null
+    },
+    {
+      "word": "nüchtern beurteilen",
+      "meaning": "assess objectively",
+      "gender": null
+    },
+    {
+      "word": "gelassen bleiben",
+      "meaning": "stay calm",
+      "gender": null
+    },
+    {
+      "word": "ausschweifend erklären",
+      "meaning": "explain at length",
+      "gender": null
+    },
+    {
+      "word": "betroffen",
+      "meaning": "concerned, affected",
+      "gender": null
+    },
+    {
+      "word": "Fleißbandfertigung",
+      "meaning": "assembly belt production",
+      "gender": "die"
+    },
+    {
+      "word": "Draht",
+      "meaning": "Wire",
+      "gender": "der"
+    },
+    {
+      "word": "gegen ein Gesetz Verstoßen",
+      "meaning": "breach a law",
+      "gender": null
+    },
+    {
+      "word": "aufweisen",
+      "meaning": "to show, exhibit, boast",
+      "gender": null
+    },
+    {
+      "word": "Berichterstattung",
+      "meaning": "Coverage, reporting",
+      "gender": "die"
+    },
+    {
+      "word": "Diebesgut",
+      "meaning": "Stolen goods",
+      "gender": "das"
+    },
+    {
+      "word": "Handschelle",
+      "meaning": "Handcuffs",
+      "gender": "die"
+    },
+    {
+      "word": "davonkommen",
+      "meaning": "get away, escape",
+      "gender": null
+    },
+    {
+      "word": "begründen",
+      "meaning": "to justify, to establish",
+      "gender": null
+    },
+    {
+      "word": "verhängen",
+      "meaning": "to impose",
+      "gender": null
+    },
+    {
+      "word": "entwenden",
+      "meaning": "to steal",
+      "gender": null
+    },
+    {
+      "word": "Angeklagte",
+      "meaning": "defendant, culprit",
+      "gender": "der"
+    },
+    {
+      "word": "Verbindungskasse",
+      "meaning": "Union fund",
+      "gender": "die"
+    },
+    {
+      "word": "Unheil",
+      "meaning": "Disaster",
+      "gender": "das"
+    },
+    {
+      "word": "Zeitumfang",
+      "meaning": "time frame",
+      "gender": "der"
+    },
+    {
+      "word": "anstarren",
+      "meaning": "to stare",
+      "gender": null
+    },
+    {
+      "word": "dadurch",
+      "meaning": "there by, thus",
+      "gender": null
+    },
+    {
+      "word": "nachahmen",
+      "meaning": "to imitate, mimic",
+      "gender": null
+    },
+    {
+      "word": "Tatendrang",
+      "meaning": "Thirst for action",
+      "gender": "der"
+    },
+    {
+      "word": "unterbewusst",
+      "meaning": "subconscious",
+      "gender": null
+    },
+    {
+      "word": "Rehe",
+      "meaning": "deer",
+      "gender": "die"
+    },
+    {
+      "word": "Gehege",
+      "meaning": "enclosure, compound",
+      "gender": "das"
+    },
+    {
+      "word": "überwuchern",
+      "meaning": "to overgrow",
+      "gender": null
+    },
+    {
+      "word": "Auffassung",
+      "meaning": "View, notion",
+      "gender": "die"
+    },
+    {
+      "word": "drängeln",
+      "meaning": "to push, shove",
+      "gender": null
+    },
+    {
+      "word": "Qualle",
+      "meaning": "jellyfish",
+      "gender": "die"
+    },
+    {
+      "word": "fernab plus Gen.",
+      "meaning": "weit entfernt",
+      "gender": null
+    },
+    {
+      "word": "Beet, Gemüsebeet",
+      "meaning": "Vegetable patch",
+      "gender": "das"
+    },
+    {
+      "word": "am ehesten",
+      "meaning": "easiest",
+      "gender": null
+    },
+    {
+      "word": "existenziell",
+      "meaning": "existential",
+      "gender": null
+    },
+    {
+      "word": "ticken",
+      "meaning": "to tick",
+      "gender": null
+    },
+    {
+      "word": "spoilern",
+      "meaning": "to spoil",
+      "gender": null
+    },
+    {
+      "word": "Geschmackssache",
+      "meaning": "matter of taste",
+      "gender": "die"
+    },
+    {
+      "word": "prägnant",
+      "meaning": "concise",
+      "gender": null
+    },
+    {
+      "word": "eigenwillig",
+      "meaning": "unconventional, idiosyncratic",
+      "gender": null
+    }
+  ],
+  "Class 20": [
+    {
+      "word": "abschweifen",
+      "meaning": "to digress, to wander from the subject",
+      "gender": null
+    },
+    {
+      "word": "Konkurrenzdruck",
+      "meaning": "Competitive pressure",
+      "gender": null
+    },
+    {
+      "word": "entschleunigen",
+      "meaning": "to slow down",
+      "gender": null
+    },
+    {
+      "word": "seufzen",
+      "meaning": "to sigh",
+      "gender": null
+    },
+    {
+      "word": "ansiedeln",
+      "meaning": "to colonize, to settle",
+      "gender": null
+    },
+    {
+      "word": "Notwehr",
+      "meaning": "self defence",
+      "gender": "die"
+    },
+    {
+      "word": "Anweisung",
+      "meaning": "Instructions",
+      "gender": "die"
+    },
+    {
+      "word": "tüchtig",
+      "meaning": "able, efficient",
+      "gender": null
+    },
+    {
+      "word": "Agens",
+      "meaning": "Agent, medium",
+      "gender": "das"
+    },
+    {
+      "word": "ausrollen",
+      "meaning": "to roll to a stop",
+      "gender": null
+    },
+    {
+      "word": "Einfall",
+      "meaning": "Idea, incidence",
+      "gender": "der"
+    },
+    {
+      "word": "verkriechen",
+      "meaning": "to hole up",
+      "gender": null
+    },
+    {
+      "word": "Befugnis",
+      "meaning": "authority, competence",
+      "gender": "die"
+    },
+    {
+      "word": "Ausschluss",
+      "meaning": "elimination",
+      "gender": "der"
+    },
+    {
+      "word": "erobern",
+      "meaning": "to conquer, to capture sth",
+      "gender": null
+    },
+    {
+      "word": "schlüssig",
+      "meaning": "conclusive, coherent",
+      "gender": null
+    },
+    {
+      "word": "Lokalkolorit",
+      "meaning": "local color",
+      "gender": "das"
+    },
+    {
+      "word": "verblüffend",
+      "meaning": "amazing, intriguing",
+      "gender": null
+    },
+    {
+      "word": "Darlehen",
+      "meaning": "loan, grant",
+      "gender": "das"
+    },
+    {
+      "word": "Spalte",
+      "meaning": "column",
+      "gender": "die"
+    },
+    {
+      "word": "Goldschmied",
+      "meaning": "Gold smith",
+      "gender": "der"
+    },
+    {
+      "word": "skizzieren",
+      "meaning": "to sketch",
+      "gender": null
+    },
+    {
+      "word": "Dann fällt uns auch was ein.",
+      "meaning": "Then we will think of something,",
+      "gender": null
+    },
+    {
+      "word": "Dirigent",
+      "meaning": "Director",
+      "gender": "der"
+    },
+    {
+      "word": "Epoche",
+      "meaning": "ein Abschnitt on der Kunstgeschichte",
+      "gender": "die"
+    },
+    {
+      "word": "verweilen",
+      "meaning": "to linger, to pause, to stay",
+      "gender": null
+    },
+    {
+      "word": "restaurieren",
+      "meaning": "to restore sth, refurbrish",
+      "gender": null
+    },
+    {
+      "word": "erbauen",
+      "meaning": "to construct, build sth",
+      "gender": null
+    },
+    {
+      "word": "Sozialkunde",
+      "meaning": "Social studies",
+      "gender": "die"
+    },
+    {
+      "word": "Betrachter",
+      "meaning": "viewer",
+      "gender": "der"
+    },
+    {
+      "word": "schmeiden",
+      "meaning": "to hammer, to forge",
+      "gender": null
+    },
+    {
+      "word": "gespalten",
+      "meaning": "split, divided",
+      "gender": null
+    },
+    {
+      "word": "Protien",
+      "meaning": "Protien",
+      "gender": "das"
+    },
+    {
+      "word": "diebisch",
+      "meaning": "thieving",
+      "gender": null
+    },
+    {
+      "word": "diebische Freude",
+      "meaning": "perverse delight",
+      "gender": null
+    },
+    {
+      "word": "fabelhaft",
+      "meaning": "fabulous",
+      "gender": null
+    },
+    {
+      "word": "gellen",
+      "meaning": "to yell",
+      "gender": null
+    },
+    {
+      "word": "abergläublich",
+      "meaning": "superstitious",
+      "gender": null
+    },
+    {
+      "word": "kläglich",
+      "meaning": "deplorable, miserable",
+      "gender": null
+    },
+    {
+      "word": "Ehrendame",
+      "meaning": "Maid of honor",
+      "gender": "die"
+    },
+    {
+      "word": "Brautjungfer",
+      "meaning": "Maid of honor",
+      "gender": "die"
+    },
+    {
+      "word": "entgiften",
+      "meaning": "to detox",
+      "gender": null
+    },
+    {
+      "word": "Tragetaschen",
+      "meaning": "Carrybags",
+      "gender": "die"
+    },
+    {
+      "word": "Schallplatten",
+      "meaning": "records",
+      "gender": "die"
+    },
+    {
+      "word": "20. Jahrhundert",
+      "meaning": "20th century",
+      "gender": null
+    },
+    {
+      "word": "Trittbewegung",
+      "meaning": "kicking motion",
+      "gender": "die"
+    },
+    {
+      "word": "Stadtrand",
+      "meaning": "Outskirts",
+      "gender": "der"
+    },
+    {
+      "word": "Ruhestand",
+      "meaning": "retirement",
+      "gender": "der"
+    },
+    {
+      "word": "Keil",
+      "meaning": "Wedge",
+      "gender": "der"
+    },
+    {
+      "word": "Ansporn",
+      "meaning": "incentive, inducement",
+      "gender": "der"
+    },
+    {
+      "word": "Kummer",
+      "meaning": "Grief, sorrow",
+      "gender": "der"
+    },
+    {
+      "word": "überschüssig",
+      "meaning": "waste, excess",
+      "gender": null
+    },
+    {
+      "word": "Durchgangverkehr",
+      "meaning": "transit traffic",
+      "gender": "der"
+    },
+    {
+      "word": "Mitspracherecht",
+      "meaning": "right to say in a matter",
+      "gender": "das"
+    },
+    {
+      "word": "Verdienst",
+      "meaning": "Merit, credit",
+      "gender": "das"
+    },
+    {
+      "word": "gegensteuern",
+      "meaning": "to take countermeasures",
+      "gender": null
+    },
+    {
+      "word": "Zuspitzung",
+      "meaning": "Escalation, sudden crisis",
+      "gender": "die"
+    },
+    {
+      "word": "nachrücken",
+      "meaning": "to move up, succeed",
+      "gender": null
+    },
+    {
+      "word": "abkaufen",
+      "meaning": "to buy off",
+      "gender": null
+    },
+    {
+      "word": "nachkaufen",
+      "meaning": "buy more",
+      "gender": null
+    },
+    {
+      "word": "aufkaufen",
+      "meaning": "buy up",
+      "gender": null
+    },
+    {
+      "word": "zulegen",
+      "meaning": "to add sth, to put on",
+      "gender": null
+    },
+    {
+      "word": "inmitten G",
+      "meaning": "among, amongst, in the middle of",
+      "gender": null
+    },
+    {
+      "word": "Bergsteigerdörfer",
+      "meaning": "Mountaineering villages",
+      "gender": "die"
+    },
+    {
+      "word": "initiieren",
+      "meaning": "to initialize, initiate",
+      "gender": null
+    },
+    {
+      "word": "Getreide",
+      "meaning": "Grain, cereal",
+      "gender": "das"
+    },
+    {
+      "word": "Fugenelement",
+      "meaning": "Joint element wie -e,s",
+      "gender": "das"
+    },
+    {
+      "word": "ausgiebig",
+      "meaning": "ample, extensive",
+      "gender": null
+    },
+    {
+      "word": "veranlassen",
+      "meaning": "to induce, to prompt, to determine",
+      "gender": null
+    },
+    {
+      "word": "Abbuchung",
+      "meaning": "debit, debit entry",
+      "gender": "die"
+    },
+    {
+      "word": "Dispokredit",
+      "meaning": "overdraft facility",
+      "gender": "der"
+    },
+    {
+      "word": "Ausschau",
+      "meaning": "look out",
+      "gender": "die"
+    },
+    {
+      "word": "ausschauen",
+      "meaning": "to look good, bad, etc",
+      "gender": null
+    },
+    {
+      "word": "Arbeitspensum",
+      "meaning": "workload",
+      "gender": "das"
+    },
+    {
+      "word": "abdrehen",
+      "meaning": "to trim, to turn,",
+      "gender": null
+    },
+    {
+      "word": "mitbekommen",
+      "meaning": "to get sth, to notice sth",
+      "gender": null
+    },
+    {
+      "word": "unehelich",
+      "meaning": "illegitimate",
+      "gender": null
+    },
+    {
+      "word": "wuschig",
+      "meaning": "agitated, nervos",
+      "gender": null
+    },
+    {
+      "word": "labern",
+      "meaning": "to jabber",
+      "gender": null
+    },
+    {
+      "word": "auf Besicht",
+      "meaning": "on inspection",
+      "gender": null
+    },
+    {
+      "word": "Erste Hilfe Kasten",
+      "meaning": "first aid kit",
+      "gender": "der"
+    },
+    {
+      "word": "Anwaltskammer",
+      "meaning": "Bar association, Bar council",
+      "gender": "die"
+    },
+    {
+      "word": "Vertagung",
+      "meaning": "postponement, adjournment",
+      "gender": "die"
+    },
+    {
+      "word": "Unterthemen",
+      "meaning": "Sub topics",
+      "gender": "die"
+    },
+    {
+      "word": "Neues wagen",
+      "meaning": "Try something new",
+      "gender": null
+    },
+    {
+      "word": "Selbst bei",
+      "meaning": "Even when",
+      "gender": null
+    },
+    {
+      "word": "Betriebsklima",
+      "meaning": "Workplace atmosphere",
+      "gender": "das"
+    },
+    {
+      "word": "Zuwanderung",
+      "meaning": "immigration",
+      "gender": "die"
+    },
+    {
+      "word": "Sanitäter",
+      "meaning": "Paramedic, Ambulance man",
+      "gender": "der"
+    },
+    {
+      "word": "Einsatz",
+      "meaning": "Stake, input",
+      "gender": "der"
+    },
+    {
+      "word": "leergefegt",
+      "meaning": "cleared out",
+      "gender": null
+    },
+    {
+      "word": "Güter einführen ausführen",
+      "meaning": "Import and Export goods",
+      "gender": null
+    },
+    {
+      "word": "schäbig",
+      "meaning": "mean, shabby",
+      "gender": null
+    },
+    {
+      "word": "Fleichuntersuchung",
+      "meaning": "Fresh meat inspection",
+      "gender": "die"
+    },
+    {
+      "word": "Nachfrage",
+      "meaning": "Need, demand, request",
+      "gender": "die"
+    },
+    {
+      "word": "Ökonomie",
+      "meaning": "Economy",
+      "gender": "die"
+    },
+    {
+      "word": "Konjunktur",
+      "meaning": "Boom, business activity",
+      "gender": "die"
+    },
+    {
+      "word": "Handle",
+      "meaning": "deal, trade",
+      "gender": "der"
+    },
+    {
+      "word": "Wichser",
+      "meaning": "Mf",
+      "gender": "der"
+    }
+  ],
+  "Class 21": [
+    {
+      "word": "vorfeiern",
+      "meaning": "to party before actual date",
+      "gender": null
+    },
+    {
+      "word": "Untätigkeitsklage",
+      "meaning": "action for faliure to act",
+      "gender": "die"
+    },
+    {
+      "word": "Klageerwiderung",
+      "meaning": "answer to complaint",
+      "gender": "die"
+    },
+    {
+      "word": "Raute",
+      "meaning": "#",
+      "gender": null
+    },
+    {
+      "word": "Sternchen",
+      "meaning": "*",
+      "gender": null
+    },
+    {
+      "word": "Bindestrich",
+      "meaning": "-",
+      "gender": null
+    },
+    {
+      "word": "Unterstrich",
+      "meaning": "_",
+      "gender": null
+    },
+    {
+      "word": "Schrägstrich",
+      "meaning": "/",
+      "gender": null
+    },
+    {
+      "word": "Klammer auf, zu",
+      "meaning": "()",
+      "gender": null
+    },
+    {
+      "word": "Anführungszeichen",
+      "meaning": "“”",
+      "gender": null
+    },
+    {
+      "word": "At-Zeichen",
+      "meaning": "@",
+      "gender": null
+    },
+    {
+      "word": "Und-Zeichen",
+      "meaning": "&",
+      "gender": null
+    },
+    {
+      "word": "gleich",
+      "meaning": "equal sign",
+      "gender": null
+    },
+    {
+      "word": "geteilt durch",
+      "meaning": "2026-06-11 02:02:00",
+      "gender": null
+    },
+    {
+      "word": "mal",
+      "meaning": "3.3000000000000003",
+      "gender": null
+    },
+    {
+      "word": "erdreisten",
+      "meaning": "to presume, to dare to do sth",
+      "gender": null
+    },
+    {
+      "word": "Vertrauenslehrerin",
+      "meaning": "Guidance Counselor",
+      "gender": "die"
+    },
+    {
+      "word": "quasi",
+      "meaning": "sort of, kind of",
+      "gender": null
+    },
+    {
+      "word": "Das ist mir unbekannt",
+      "meaning": "Thats unknown to me",
+      "gender": null
+    },
+    {
+      "word": "Ist mir Wurst",
+      "meaning": "I dont care",
+      "gender": null
+    },
+    {
+      "word": "Sondergesandte",
+      "meaning": "Special envoy",
+      "gender": "der"
+    },
+    {
+      "word": "Nichtigkeit",
+      "meaning": "nullity, voidness",
+      "gender": "die"
+    },
+    {
+      "word": "gebieten",
+      "meaning": "to mandate sth, to command",
+      "gender": null
+    },
+    {
+      "word": "Absturz",
+      "meaning": "crash, fall, collapse",
+      "gender": "der"
+    },
+    {
+      "word": "sich vordrücken",
+      "meaning": "push ahead, cut in line",
+      "gender": null
+    },
+    {
+      "word": "sich vor etwas drücken",
+      "meaning": "avoid something",
+      "gender": null
+    },
+    {
+      "word": "Rechtlinien",
+      "meaning": "COde of practice, rules of action",
+      "gender": "die"
+    },
+    {
+      "word": "Offenlegung",
+      "meaning": "disclosure, publication",
+      "gender": "die"
+    },
+    {
+      "word": "dedizieren",
+      "meaning": "to dedicate",
+      "gender": null
+    },
+    {
+      "word": "Auffrischungsschulung",
+      "meaning": "Refresher training",
+      "gender": "die"
+    },
+    {
+      "word": "Zugzwang",
+      "meaning": "Compulsion to move",
+      "gender": "der"
+    },
+    {
+      "word": "Elternbeirat",
+      "meaning": "Parents association",
+      "gender": "der"
+    },
+    {
+      "word": "Wahlschein",
+      "meaning": "Voting Paper",
+      "gender": "der"
+    },
+    {
+      "word": "meckern",
+      "meaning": "to bitch, grump",
+      "gender": null
+    },
+    {
+      "word": "entgleisen",
+      "meaning": "to derail",
+      "gender": null
+    },
+    {
+      "word": "Tötungsdelikt",
+      "meaning": "Homicide",
+      "gender": "das"
+    },
+    {
+      "word": "Furie",
+      "meaning": "Fiend, Fury",
+      "gender": "die"
+    },
+    {
+      "word": "Abenddämmerung",
+      "meaning": "Dusk",
+      "gender": "die"
+    },
+    {
+      "word": "Morgendämmerung",
+      "meaning": "Dawn",
+      "gender": "die"
+    },
+    {
+      "word": "sich befassen mit",
+      "meaning": "to address, to deal with",
+      "gender": null
+    },
+    {
+      "word": "Marine",
+      "meaning": "Navy",
+      "gender": "die"
+    },
+    {
+      "word": "Militär",
+      "meaning": "Army",
+      "gender": "das"
+    },
+    {
+      "word": "Luftwaffe",
+      "meaning": "Airforce",
+      "gender": "die"
+    },
+    {
+      "word": "Berührung",
+      "meaning": "Touch",
+      "gender": "die"
+    },
+    {
+      "word": "aufkreuzen",
+      "meaning": "to show up, turn up",
+      "gender": null
+    },
+    {
+      "word": "schaudern",
+      "meaning": "to shiver, shudder",
+      "gender": null
+    },
+    {
+      "word": "Nichtsnutz",
+      "meaning": "Waster, no-good",
+      "gender": "der"
+    },
+    {
+      "word": "prächtig",
+      "meaning": "grand, splendid, gorgeous",
+      "gender": null
+    },
+    {
+      "word": "hinüberspähen",
+      "meaning": "glance across",
+      "gender": null
+    },
+    {
+      "word": "recken",
+      "meaning": "to forge, to strain, to elongate sth",
+      "gender": null
+    },
+    {
+      "word": "verstricken",
+      "meaning": "to embroil, to become caught up in sth",
+      "gender": null
+    },
+    {
+      "word": "Visagist",
+      "meaning": "Makeup artist",
+      "gender": "der"
+    },
+    {
+      "word": "überarbeiten",
+      "meaning": "to revise sth, to rework sth",
+      "gender": null
+    },
+    {
+      "word": "auseinanderbrechen",
+      "meaning": "to break up",
+      "gender": null
+    },
+    {
+      "word": "unterbinden",
+      "meaning": "to disable, to prohibit, to prevent",
+      "gender": null
+    },
+    {
+      "word": "Chancegleichheit",
+      "meaning": "Equality of opportunity",
+      "gender": "die"
+    },
+    {
+      "word": "Weltanschauung",
+      "meaning": "Ideology, philosophy of life",
+      "gender": "die"
+    },
+    {
+      "word": "knobeln",
+      "meaning": "to draw lots",
+      "gender": null
+    },
+    {
+      "word": "ausklingen",
+      "meaning": "to die away, to end, to stop ringing",
+      "gender": null
+    },
+    {
+      "word": "abrunden",
+      "meaning": "to roundoff",
+      "gender": null
+    },
+    {
+      "word": "eintönig",
+      "meaning": "monotonous",
+      "gender": null
+    },
+    {
+      "word": "Aufstiegsmöglichkeit",
+      "meaning": "Opportunity for advancement",
+      "gender": "die"
+    },
+    {
+      "word": "Blei",
+      "meaning": "lead",
+      "gender": "das"
+    },
+    {
+      "word": "Gras",
+      "meaning": "Grass, pasture",
+      "gender": "das"
+    },
+    {
+      "word": "ausmachen",
+      "meaning": "to arrange sth, to constitute sth",
+      "gender": null
+    },
+    {
+      "word": "Fonds",
+      "meaning": "Fund, Pool, endowment fund",
+      "gender": "der-die"
+    },
+    {
+      "word": "Auswärtiges Amt",
+      "meaning": "Ministry of foreign affairs",
+      "gender": null
+    },
+    {
+      "word": "bergig",
+      "meaning": "mountainous",
+      "gender": null
+    },
+    {
+      "word": "durchstreifen",
+      "meaning": "to range the woods like forest",
+      "gender": null
+    },
+    {
+      "word": "ausspähen",
+      "meaning": "to spy out",
+      "gender": null
+    },
+    {
+      "word": "Grundnahrung",
+      "meaning": "Basic food",
+      "gender": "die"
+    },
+    {
+      "word": "Schwund",
+      "meaning": "Shrinkage, fading",
+      "gender": "der"
+    },
+    {
+      "word": "bestäuben",
+      "meaning": "to dust, to pollenize",
+      "gender": null
+    },
+    {
+      "word": "eigenhändig",
+      "meaning": "by own hand",
+      "gender": null
+    },
+    {
+      "word": "Bekanntgabe",
+      "meaning": "announcement, disclosure",
+      "gender": "die"
+    },
+    {
+      "word": "Unterstützer",
+      "meaning": "Backer, facilitator",
+      "gender": "der"
+    },
+    {
+      "word": "Frauenquote",
+      "meaning": "womens quota",
+      "gender": "die"
+    },
+    {
+      "word": "aufklären",
+      "meaning": "to explain, clear sth",
+      "gender": null
+    },
+    {
+      "word": "Treibhaus",
+      "meaning": "Greenhouse",
+      "gender": "das"
+    },
+    {
+      "word": "Ortschaft",
+      "meaning": "small town, build up area, locality",
+      "gender": "die"
+    },
+    {
+      "word": "Bündnis",
+      "meaning": "Alliance, league",
+      "gender": "das"
+    },
+    {
+      "word": "Vereinssatzung",
+      "meaning": "Articles of association",
+      "gender": "die"
+    },
+    {
+      "word": "banal",
+      "meaning": "mundane, trivial",
+      "gender": null
+    },
+    {
+      "word": "vermissen",
+      "meaning": "to miss so, to want for sth",
+      "gender": null
+    },
+    {
+      "word": "Strömung-en",
+      "meaning": "Current, stream",
+      "gender": "die"
+    },
+    {
+      "word": "Wohlstand",
+      "meaning": "Affluence, prosperity, wealth",
+      "gender": "der"
+    },
+    {
+      "word": "Frust",
+      "meaning": "Frustration",
+      "gender": "der"
+    },
+    {
+      "word": "Bettelstab",
+      "meaning": "begging stick",
+      "gender": "der"
+    },
+    {
+      "word": "Einzelfall",
+      "meaning": "Individual case, particular case",
+      "gender": "der"
+    },
+    {
+      "word": "Säugetier",
+      "meaning": "Mammal",
+      "gender": "das"
+    },
+    {
+      "word": "unmittelbar",
+      "meaning": "direct, immediate, actual",
+      "gender": null
+    },
+    {
+      "word": "Kollegium",
+      "meaning": "Council, college",
+      "gender": "das"
+    },
+    {
+      "word": "Kanu",
+      "meaning": "small boat",
+      "gender": "das"
+    },
+    {
+      "word": "Verkehrsaufkommen",
+      "meaning": "Volume of traffic",
+      "gender": "das"
+    },
+    {
+      "word": "Elektroschrott",
+      "meaning": "Electronic scrap",
+      "gender": "der"
+    },
+    {
+      "word": "Nachfahre-n",
+      "meaning": "Successor",
+      "gender": "der-die"
+    },
+    {
+      "word": "nachfahren",
+      "meaning": "to simulate, reconstruct",
+      "gender": null
+    },
+    {
+      "word": "mitziehen",
+      "meaning": "to tag along, to go along with",
+      "gender": null
+    },
+    {
+      "word": "Ökosiegel",
+      "meaning": "Eco-Lable",
+      "gender": "das"
+    },
+    {
+      "word": "Tropenholz",
+      "meaning": "Tropical timber",
+      "gender": "das"
+    },
+    {
+      "word": "Nachholbedarf",
+      "meaning": "backlog demand, catch up demand",
+      "gender": "der"
+    },
+    {
+      "word": "Unterordnung",
+      "meaning": "subordination",
+      "gender": "die"
+    },
+    {
+      "word": "entlarven",
+      "meaning": "to unmask so, to expose so",
+      "gender": null
+    },
+    {
+      "word": "Bruchteil",
+      "meaning": "fraction",
+      "gender": "der"
+    },
+    {
+      "word": "straffen",
+      "meaning": "to tighten",
+      "gender": null
+    },
+    {
+      "word": "Überschüsse",
+      "meaning": "Surplus, bonuses",
+      "gender": "die"
+    },
+    {
+      "word": "Sehvermögen",
+      "meaning": "Vision, Sight",
+      "gender": "das"
+    },
+    {
+      "word": "Ausgrabung",
+      "meaning": "Archaeological, excavation, dig",
+      "gender": "die"
+    },
+    {
+      "word": "römisch",
+      "meaning": "roman, latin",
+      "gender": null
+    },
+    {
+      "word": "Völkerkunde",
+      "meaning": "Ethnology",
+      "gender": "die"
+    },
+    {
+      "word": "Aussagekraft",
+      "meaning": "Meaningfullness, Explanatory power",
+      "gender": "die"
+    },
+    {
+      "word": "unvoreingenommen",
+      "meaning": "disinterested, open minded, unbaised, impartial",
+      "gender": null
+    },
+    {
+      "word": "unweigerlich",
+      "meaning": "inevitably, without fail",
+      "gender": null
+    },
+    {
+      "word": "tonnenweise",
+      "meaning": "by metric ton, in barrels",
+      "gender": null
+    },
+    {
+      "word": "vollstopfen",
+      "meaning": "to clutter up, to cram sth",
+      "gender": null
+    },
+    {
+      "word": "Teamgeist",
+      "meaning": "Team spirit",
+      "gender": "der"
+    },
+    {
+      "word": "grenzüberschreitend",
+      "meaning": "cross border",
+      "gender": null
+    },
+    {
+      "word": "aneignen",
+      "meaning": "to acquire sth, to adopt sth",
+      "gender": null
+    },
+    {
+      "word": "abschließend",
+      "meaning": "concluding, closing",
+      "gender": null
+    },
+    {
+      "word": "Handhabung",
+      "meaning": "Handling, manipulation, use, administration",
+      "gender": "die"
+    },
+    {
+      "word": "anderweitig",
+      "meaning": "otherwise expressely agreed, alternative",
+      "gender": null
+    },
+    {
+      "word": "Verwandtschaft",
+      "meaning": "relationship, blood relation, alliance",
+      "gender": "die"
+    },
+    {
+      "word": "bedrängen",
+      "meaning": "to press hard, to pressure",
+      "gender": null
+    },
+    {
+      "word": "Auseinandersetzungen",
+      "meaning": "Argument, disputes",
+      "gender": "die"
+    },
+    {
+      "word": "Berührungsangst",
+      "meaning": "fear of contact, reservation",
+      "gender": "die"
+    },
+    {
+      "word": "Versuchsaufbau",
+      "meaning": "Experimental setup, test preparation",
+      "gender": "der"
+    },
+    {
+      "word": "Abnahme",
+      "meaning": "decline, drop",
+      "gender": "die"
+    },
+    {
+      "word": "Annahme",
+      "meaning": "Adoption, assumption, acceptance",
+      "gender": "die"
+    },
+    {
+      "word": "Spediteur",
+      "meaning": "Express agent, mover, forwarding agent",
+      "gender": "der"
+    },
+    {
+      "word": "These",
+      "meaning": "Assumption, Hypothesis, Theory",
+      "gender": "die"
+    },
+    {
+      "word": "Speditionsfirma",
+      "meaning": "Shipping company",
+      "gender": "die"
+    },
+    {
+      "word": "Spedition",
+      "meaning": "Dispatch, transport company",
+      "gender": "die"
+    },
+    {
+      "word": "untergeordnet",
+      "meaning": "subsidiary, subordinated",
+      "gender": null
+    },
+    {
+      "word": "unterordnen",
+      "meaning": "to subordinate",
+      "gender": null
+    },
+    {
+      "word": "verlosen",
+      "meaning": "to draw, like lottrey",
+      "gender": null
+    },
+    {
+      "word": "Krawall-e",
+      "meaning": "Riot, Brawl",
+      "gender": "der-die"
+    },
+    {
+      "word": "Söldner",
+      "meaning": "mercenary Soldier, only for money soldier",
+      "gender": "der"
     }
   ]
 };

@@ -5,6 +5,7 @@ let state = {
     mode: "de-en",
     activeCategory: "Chap",
     selectedChapters: [],
+    selectedVerbFamilies: [],
     wordLimit: "all",
     currentIndex: 0,
     score: { correct: 0, wrong: 0 },
@@ -16,10 +17,11 @@ let state = {
 /* ===========================
    CATEGORY CONFIG
    =========================== */
-const CATEGORIES = ["Chap", "Kapi", "Lek", "Prac", "Class"];
+const CATEGORIES = ["Chap", "Kapi", "Lek", "Prac", "Class", "VerbFam"];
 
 function getCategory(key) {
-    for (const cat of CATEGORIES) {
+    if (key.startsWith("VF:")) return "VerbFam";
+    for (const cat of ["Chap", "Kapi", "Lek", "Prac", "Class"]) {
         if (key.startsWith(cat)) return cat;
     }
     return null;
@@ -69,6 +71,8 @@ const dom = {
     restartBtn: $("restartBtn"),
     switchModeBtn: $("switchModeBtn"),
     homeBtn: $("homeBtn"),
+    vfSearch: $("vfSearch"),
+    clearAllBtn: $("clearAllBtn"),
 };
 
 /* ===========================
@@ -112,7 +116,8 @@ function showScreen(screen) {
 function buildChapterButtons() {
     const allKeys = Object.keys(ALL_VOCAB_DATA);
 
-    CATEGORIES.forEach(cat => {
+    // Standard categories
+    ["Chap", "Kapi", "Lek", "Prac", "Class"].forEach(cat => {
         const grid = $(`grid-${cat}`);
         if (!grid) return;
         grid.innerHTML = "";
@@ -125,7 +130,6 @@ function buildChapterButtons() {
             btn.className = "chap-btn";
             btn.dataset.chapter = key;
 
-            // Short label
             let label = key
                 .replace("Chap ", "Ch ")
                 .replace("Kapi ", "K")
@@ -138,6 +142,63 @@ function buildChapterButtons() {
             grid.appendChild(btn);
         });
     });
+
+    // Verb Families grid
+    buildVerbFamilyButtons();
+}
+
+function buildVerbFamilyButtons() {
+    const grid = $("grid-VerbFam");
+    if (!grid || typeof VERB_FAMILIES_DATA === "undefined") return;
+    grid.innerHTML = "";
+
+    // Sort roots: bigger families first, then alphabetically
+    const roots = Object.keys(VERB_FAMILIES_DATA).sort((a, b) => {
+        const diff = VERB_FAMILIES_DATA[b].length - VERB_FAMILIES_DATA[a].length;
+        return diff !== 0 ? diff : a.localeCompare(b);
+    });
+
+    roots.forEach(root => {
+        const forms = VERB_FAMILIES_DATA[root];
+        const count = forms.length;
+        const hasC1 = forms.some(f => f.isC1);
+        const key = `VF:${root}`;
+
+        const btn = document.createElement("button");
+        btn.className = "chap-btn";
+        btn.dataset.chapter = key;
+        btn.dataset.root = root.toLowerCase();
+
+        let labelHtml = `<span>${root}</span>`;
+        if (hasC1) {
+            labelHtml += `<span class="c1-tag">+C1</span>`;
+        }
+        labelHtml += `<span class="chap-count">${count}</span>`;
+
+        btn.innerHTML = labelHtml;
+        btn.addEventListener("click", () => toggleVerbFamily(key, btn));
+        grid.appendChild(btn);
+    });
+}
+
+/* ===========================
+   VERB FAMILY SEARCH
+   =========================== */
+if (dom.vfSearch) {
+    dom.vfSearch.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const grid = $("grid-VerbFam");
+        if (!grid) return;
+
+        grid.querySelectorAll(".chap-btn").forEach(btn => {
+            const root = btn.dataset.root || "";
+            if (!query || root.includes(query)) {
+                btn.classList.remove("hidden");
+            } else {
+                btn.classList.add("hidden");
+            }
+        });
+    });
 }
 
 /* ===========================
@@ -146,12 +207,10 @@ function buildChapterButtons() {
 function switchCategory(cat) {
     state.activeCategory = cat;
 
-    // Update tab buttons
     dom.categoryTabs.querySelectorAll(".cat-tab").forEach(t => {
         t.classList.toggle("active", t.dataset.cat === cat);
     });
 
-    // Show/hide panels
     CATEGORIES.forEach(c => {
         const panel = $(`panel-${c}`);
         if (panel) panel.classList.toggle("active", c === cat);
@@ -169,14 +228,40 @@ dom.categoryTabs.addEventListener("click", (e) => {
 document.querySelectorAll(".select-all-btn").forEach(btn => {
     btn.addEventListener("click", () => {
         const cat = btn.dataset.cat;
+
+        if (cat === "VerbFam") {
+            // Handle verb families select all
+            const grid = $("grid-VerbFam");
+            const chapBtns = grid.querySelectorAll(".chap-btn:not(.hidden)");
+            const keysInCat = Array.from(chapBtns).map(b => b.dataset.chapter);
+            const allSelected = keysInCat.every(k => state.selectedChapters.includes(k));
+
+            if (allSelected) {
+                keysInCat.forEach(k => {
+                    const idx = state.selectedChapters.indexOf(k);
+                    if (idx !== -1) state.selectedChapters.splice(idx, 1);
+                });
+                chapBtns.forEach(b => b.classList.remove("selected"));
+                btn.textContent = "Alle auswählen";
+                btn.classList.remove("deselect");
+            } else {
+                keysInCat.forEach(k => {
+                    if (!state.selectedChapters.includes(k)) state.selectedChapters.push(k);
+                });
+                chapBtns.forEach(b => b.classList.add("selected"));
+                btn.textContent = "Alle abwählen";
+                btn.classList.add("deselect");
+            }
+            updateSelectionInfo();
+            return;
+        }
+
         const grid = $(`grid-${cat}`);
         const chapBtns = grid.querySelectorAll(".chap-btn");
-
         const keysInCat = Array.from(chapBtns).map(b => b.dataset.chapter);
         const allSelected = keysInCat.every(k => state.selectedChapters.includes(k));
 
         if (allSelected) {
-            // Deselect all in this category
             keysInCat.forEach(k => {
                 const idx = state.selectedChapters.indexOf(k);
                 if (idx !== -1) state.selectedChapters.splice(idx, 1);
@@ -185,7 +270,6 @@ document.querySelectorAll(".select-all-btn").forEach(btn => {
             btn.textContent = "Alle auswählen";
             btn.classList.remove("deselect");
         } else {
-            // Select all in this category
             keysInCat.forEach(k => {
                 if (!state.selectedChapters.includes(k)) state.selectedChapters.push(k);
             });
@@ -199,7 +283,7 @@ document.querySelectorAll(".select-all-btn").forEach(btn => {
 });
 
 /* ===========================
-   TOGGLE CHAPTER
+   TOGGLE CHAPTER / VERB FAMILY
    =========================== */
 function toggleChapter(key, btn) {
     const idx = state.selectedChapters.indexOf(key);
@@ -214,12 +298,25 @@ function toggleChapter(key, btn) {
     updateSelectionInfo();
 }
 
+function toggleVerbFamily(key, btn) {
+    const idx = state.selectedChapters.indexOf(key);
+    if (idx === -1) {
+        state.selectedChapters.push(key);
+        btn.classList.add("selected");
+    } else {
+        state.selectedChapters.splice(idx, 1);
+        btn.classList.remove("selected");
+    }
+    updateSelectAllButton("VerbFam");
+    updateSelectionInfo();
+}
+
 function updateSelectAllButton(cat) {
     const grid = $(`grid-${cat}`);
     const panel = $(`panel-${cat}`);
     if (!grid || !panel) return;
 
-    const chapBtns = grid.querySelectorAll(".chap-btn");
+    const chapBtns = grid.querySelectorAll(".chap-btn:not(.hidden)");
     const keysInCat = Array.from(chapBtns).map(b => b.dataset.chapter);
     const allSelected = keysInCat.every(k => state.selectedChapters.includes(k));
 
@@ -244,12 +341,27 @@ function updateSelectionInfo() {
 
     let totalWords = 0;
     state.selectedChapters.forEach(ch => {
-        totalWords += ALL_VOCAB_DATA[ch].length;
+        if (ch.startsWith("VF:")) {
+            const root = ch.substring(3);
+            totalWords += (VERB_FAMILIES_DATA[root] || []).length;
+        } else {
+            totalWords += (ALL_VOCAB_DATA[ch] || []).length;
+        }
     });
 
-    const label = state.selectedChapters.length === 1
-        ? state.selectedChapters[0]
-        : `${state.selectedChapters.length} Abschnitte`;
+    const vfCount = state.selectedChapters.filter(c => c.startsWith("VF:")).length;
+    const chCount = state.selectedChapters.filter(c => !c.startsWith("VF:")).length;
+
+    let label;
+    if (vfCount > 0 && chCount > 0) {
+        label = `${chCount} Abschnitte + ${vfCount} Verbfamilien`;
+    } else if (vfCount > 0) {
+        label = vfCount === 1 ? state.selectedChapters[0].substring(3) : `${vfCount} Verbfamilien`;
+    } else {
+        label = state.selectedChapters.length === 1
+            ? state.selectedChapters[0]
+            : `${state.selectedChapters.length} Abschnitte`;
+    }
 
     dom.selectionLabel.textContent = label;
     dom.selectionCount.textContent = `${totalWords} Wörter`;
@@ -262,11 +374,23 @@ function updateSelectionInfo() {
    =========================== */
 function generateQuestions() {
     let pool = [];
+
     state.selectedChapters.forEach(ch => {
-        ALL_VOCAB_DATA[ch].forEach(w => {
-            pool.push({ ...w, chapter: ch });
-        });
+        if (ch.startsWith("VF:")) {
+            const root = ch.substring(3);
+            const forms = VERB_FAMILIES_DATA[root] || [];
+            forms.forEach(w => {
+                pool.push({ ...w, chapter: root + " (Verbfamilie)" });
+            });
+        } else {
+            (ALL_VOCAB_DATA[ch] || []).forEach(w => {
+                pool.push({ ...w, chapter: ch });
+            });
+        }
     });
+
+    // Filter out entries with empty meaning for quiz
+    pool = pool.filter(w => w.meaning && w.meaning.trim() !== "");
 
     let shuffled = shuffle(pool);
 
@@ -278,10 +402,12 @@ function generateQuestions() {
     const allMeanings = pool.map(w => w.meaning);
     const allWords = pool.map(w => w.word);
 
-    // Fallback distractors from entire dataset
+    // Fallback distractors from entire dataset + verb families
     const globalData = Object.values(ALL_VOCAB_DATA).flat();
-    const globalMeanings = globalData.map(w => w.meaning);
-    const globalWords = globalData.map(w => w.word);
+    const vfData = typeof VERB_FAMILIES_DATA !== "undefined" ? Object.values(VERB_FAMILIES_DATA).flat() : [];
+    const combinedGlobal = [...globalData, ...vfData].filter(w => w.meaning && w.meaning.trim());
+    const globalMeanings = combinedGlobal.map(w => w.meaning);
+    const globalWords = combinedGlobal.map(w => w.word);
 
     return shuffled.map(item => {
         let question, correctAnswer, options;
@@ -497,10 +623,23 @@ function startQuiz() {
     state.missedWords = [];
     state.questions = generateQuestions();
 
-    const label = state.selectedChapters.length <= 3
-        ? state.selectedChapters.join(", ")
-        : `${state.selectedChapters.length} Abschnitte`;
-    dom.quizChapterLabel.textContent = label;
+    if (state.questions.length === 0) {
+        alert("Keine Wörter mit Bedeutung gefunden. Bitte wähle andere Abschnitte.");
+        return;
+    }
+
+    const vfItems = state.selectedChapters.filter(c => c.startsWith("VF:"));
+    const chItems = state.selectedChapters.filter(c => !c.startsWith("VF:"));
+
+    let labelParts = [];
+    if (chItems.length > 0) {
+        labelParts.push(chItems.length <= 3 ? chItems.join(", ") : `${chItems.length} Abschnitte`);
+    }
+    if (vfItems.length > 0) {
+        const rootNames = vfItems.map(v => v.substring(3));
+        labelParts.push(rootNames.length <= 3 ? rootNames.join(", ") : `${rootNames.length} Verbfamilien`);
+    }
+    dom.quizChapterLabel.textContent = labelParts.join(" + ");
 
     showScreen(dom.quizScreen);
     renderQuestion();
@@ -563,10 +702,35 @@ document.addEventListener("keydown", (e) => {
         }
     }
     if (dom.startScreen.classList.contains("active") && e.key === "Enter") {
-        e.preventDefault();
-        startQuiz();
+        // Only start if not typing in search
+        if (document.activeElement !== dom.vfSearch) {
+            e.preventDefault();
+            startQuiz();
+        }
     }
 });
+
+/* ===========================
+   CLEAR ALL SELECTIONS
+   =========================== */
+function clearAllSelections() {
+    state.selectedChapters = [];
+
+    // Deselect all buttons across all grids
+    document.querySelectorAll(".chap-btn.selected").forEach(btn => {
+        btn.classList.remove("selected");
+    });
+
+    // Reset all select-all buttons
+    document.querySelectorAll(".select-all-btn").forEach(btn => {
+        btn.textContent = "Alle auswählen";
+        btn.classList.remove("deselect");
+    });
+
+    updateSelectionInfo();
+}
+
+dom.clearAllBtn.addEventListener("click", clearAllSelections);
 
 /* ===========================
    INIT

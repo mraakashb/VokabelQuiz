@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deutsch Vokabelquiz – Alle Kapitel</title>
-    <meta name="description" content="Interactive German vocabulary quiz – 4500+ words across Chap, Kapi, Lek, Prac and Class sections.">
+    <meta name="description" content="Interactive German vocabulary quiz – 4900+ words + 940 verb forms across A2, B1, B2 levels.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,52 +16,64 @@
         <div class="start-container">
             <div class="logo-badge"><span class="logo-icon">🇩🇪</span></div>
             <h1 class="start-title">Vokabel<span class="accent">Quiz</span></h1>
-            <p class="start-subtitle">4.500+ Wörter · 71 Abschnitte</p>
+            <p class="start-subtitle">4.900+ Wörter · 74 Abschnitte · 182 Verbfamilien</p>
 
             <!-- Category Tabs -->
             <div class="category-tabs" id="categoryTabs">
-                <button class="cat-tab active" data-cat="Chap">📖 Chap</button>
-                <button class="cat-tab" data-cat="Kapi">📗 Kapi</button>
-                <button class="cat-tab" data-cat="Lek">📘 Lek</button>
-                <button class="cat-tab" data-cat="Prac">📙 Prac</button>
-                <button class="cat-tab" data-cat="Class">📕 Class</button>
+                <button class="cat-tab active" data-cat="Chap">📖 A2 Chapters</button>
+                <button class="cat-tab" data-cat="Kapi">📗 A2 Kapitel</button>
+                <button class="cat-tab" data-cat="Lek">📘 B1 Lektionen</button>
+                <button class="cat-tab" data-cat="Prac">📙 B1-B2 Practice</button>
+                <button class="cat-tab" data-cat="Class">📕 B2 Classes</button>
+                <button class="cat-tab" data-cat="VerbFam">🔗 Verb Families</button>
             </div>
 
-            <!-- Chapter Grids (one per category, toggled by tabs) -->
+            <!-- Chapter Panels -->
             <div class="chapter-panel active" id="panel-Chap">
                 <div class="panel-header">
-                    <span class="panel-title">Schritte · Chapters 1–12</span>
+                    <span class="panel-title">A2 Chapters 1–12</span>
                     <button class="select-all-btn" data-cat="Chap">Alle auswählen</button>
                 </div>
                 <div class="chapter-grid" id="grid-Chap"></div>
             </div>
             <div class="chapter-panel" id="panel-Kapi">
                 <div class="panel-header">
-                    <span class="panel-title">Kapitel 1–12</span>
+                    <span class="panel-title">A2 Kapitel 1–12</span>
                     <button class="select-all-btn" data-cat="Kapi">Alle auswählen</button>
                 </div>
                 <div class="chapter-grid" id="grid-Kapi"></div>
             </div>
             <div class="chapter-panel" id="panel-Lek">
                 <div class="panel-header">
-                    <span class="panel-title">Aspekte · Lektion 1–12 + Kombiniert</span>
+                    <span class="panel-title">B1 Lektion 1–12 + Kombiniert</span>
                     <button class="select-all-btn" data-cat="Lek">Alle auswählen</button>
                 </div>
                 <div class="chapter-grid" id="grid-Lek"></div>
             </div>
             <div class="chapter-panel" id="panel-Prac">
                 <div class="panel-header">
-                    <span class="panel-title">Practice Sessions 1–13</span>
+                    <span class="panel-title">B1-B2 Practice 1–13</span>
                     <button class="select-all-btn" data-cat="Prac">Alle auswählen</button>
                 </div>
                 <div class="chapter-grid" id="grid-Prac"></div>
             </div>
             <div class="chapter-panel" id="panel-Class">
                 <div class="panel-header">
-                    <span class="panel-title">Class Notes 1–18</span>
+                    <span class="panel-title">B2 Classes 1–21</span>
                     <button class="select-all-btn" data-cat="Class">Alle auswählen</button>
                 </div>
                 <div class="chapter-grid" id="grid-Class"></div>
+            </div>
+
+            <div class="chapter-panel" id="panel-VerbFam">
+                <div class="panel-header">
+                    <span class="panel-title">Verbfamilien – Wähle einen Wortstamm</span>
+                    <button class="select-all-btn" data-cat="VerbFam">Alle auswählen</button>
+                </div>
+                <div class="vf-search-box">
+                    <input type="text" id="vfSearch" class="vf-search" placeholder="🔍  Stamm suchen (z.B. geben, stehen...)">
+                </div>
+                <div class="chapter-grid vf-grid" id="grid-VerbFam"></div>
             </div>
 
             <!-- Selection Info -->
@@ -69,6 +81,7 @@
                 <span class="selection-label" id="selectionLabel"></span>
                 <span class="selection-dot">·</span>
                 <span class="selection-count" id="selectionCount"></span>
+                <button class="clear-all-btn" id="clearAllBtn">✕ Clear All</button>
             </div>
 
             <!-- Mode -->
@@ -191,6 +204,7 @@
     </div>
 
     <script src="vocab_data.js"></script>
+    <script src="verb_families_data.js"></script>
     <script src="quiz.js"></script>
 </body>
 </html>
