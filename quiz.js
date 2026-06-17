@@ -733,6 +733,181 @@ function clearAllSelections() {
 dom.clearAllBtn.addEventListener("click", clearAllSelections);
 
 /* ===========================
+   DICTIONARY SEARCH
+   =========================== */
+const searchDom = {
+    screen: $("searchScreen"),
+    openBtn: $("searchOpenBtn"),
+    backBtn: $("searchBackBtn"),
+    input: $("dictSearch"),
+    clearBtn: $("searchClearBtn"),
+    results: $("searchResults"),
+    stats: $("searchStats"),
+    modeDe: $("searchModeDe"),
+    modeEn: $("searchModeEn"),
+};
+
+let searchMode = "de"; // "de" = search German, "en" = search English
+
+// Build flat index once
+function buildSearchIndex() {
+    const index = [];
+
+    // All vocab data
+    Object.entries(ALL_VOCAB_DATA).forEach(([section, words]) => {
+        words.forEach(w => {
+            if (w.word && w.word.trim()) {
+                index.push({
+                    word: w.word.trim(),
+                    meaning: (w.meaning || "").trim(),
+                    gender: w.gender && w.gender !== "None" ? w.gender : null,
+                    source: section,
+                });
+            }
+        });
+    });
+
+    // Verb families data
+    if (typeof VERB_FAMILIES_DATA !== "undefined") {
+        Object.entries(VERB_FAMILIES_DATA).forEach(([root, forms]) => {
+            forms.forEach(f => {
+                if (f.word && f.meaning) {
+                    index.push({
+                        word: f.word.trim(),
+                        meaning: f.meaning.trim(),
+                        gender: null,
+                        source: `VF: ${root}`,
+                        isC1: f.isC1 || false,
+                    });
+                }
+            });
+        });
+    }
+
+    return index;
+}
+
+const searchIndex = buildSearchIndex();
+
+function highlightMatch(text, query) {
+    if (!query) return text;
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const regex = new RegExp(`(${escaped})`, "gi");
+    return text.replace(regex, "<mark>$1</mark>");
+}
+
+function performSearch(query) {
+    if (!query || query.length < 1) {
+        searchDom.results.innerHTML = `
+            <div class="search-empty">
+                <span class="search-empty-icon">🔍</span>
+                <p>Gib ein Wort ein, um alle passenden Vokabeln zu finden</p>
+            </div>`;
+        searchDom.stats.textContent = "";
+        return;
+    }
+
+    const q = query.toLowerCase().trim();
+
+    const results = searchIndex.filter(item => {
+        if (searchMode === "de") {
+            return item.word.toLowerCase().includes(q);
+        } else {
+            return item.meaning.toLowerCase().includes(q);
+        }
+    });
+
+    // Sort: exact start matches first, then by length
+    results.sort((a, b) => {
+        const fieldA = searchMode === "de" ? a.word.toLowerCase() : a.meaning.toLowerCase();
+        const fieldB = searchMode === "de" ? b.word.toLowerCase() : b.meaning.toLowerCase();
+        const startsA = fieldA.startsWith(q) ? 0 : 1;
+        const startsB = fieldB.startsWith(q) ? 0 : 1;
+        if (startsA !== startsB) return startsA - startsB;
+        return fieldA.length - fieldB.length;
+    });
+
+    // Cap at 100 results for performance
+    const shown = results.slice(0, 100);
+
+    searchDom.stats.textContent = results.length > 0
+        ? `${results.length} Ergebnis${results.length !== 1 ? "se" : ""} gefunden${results.length > 100 ? " (erste 100 angezeigt)" : ""}`
+        : "";
+
+    if (shown.length === 0) {
+        searchDom.results.innerHTML = `
+            <div class="search-empty">
+                <span class="search-empty-icon">😕</span>
+                <p>Keine Ergebnisse für „${query}"</p>
+            </div>`;
+        return;
+    }
+
+    searchDom.results.innerHTML = shown.map(item => {
+        const wordHtml = searchMode === "de"
+            ? highlightMatch(item.word, query)
+            : item.word;
+        const meaningHtml = searchMode === "en"
+            ? highlightMatch(item.meaning, query)
+            : item.meaning;
+
+        let genderHtml = "";
+        if (item.gender) {
+            const gClass = item.gender.split("-")[0];
+            genderHtml = `<span class="sr-gender ${gClass}">${item.gender}</span>`;
+        }
+
+        return `<div class="search-result-item">
+            ${genderHtml}
+            <span class="sr-word">${wordHtml}</span>
+            <span class="sr-meaning">${meaningHtml || "—"}</span>
+            <span class="sr-source">${item.source}</span>
+        </div>`;
+    }).join("");
+}
+
+// Debounce
+let searchTimer = null;
+searchDom.input.addEventListener("input", () => {
+    const val = searchDom.input.value;
+    searchDom.clearBtn.classList.toggle("hidden", val.length === 0);
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => performSearch(val), 150);
+});
+
+searchDom.clearBtn.addEventListener("click", () => {
+    searchDom.input.value = "";
+    searchDom.clearBtn.classList.add("hidden");
+    performSearch("");
+    searchDom.input.focus();
+});
+
+// Mode toggle
+searchDom.modeDe.addEventListener("click", () => {
+    searchMode = "de";
+    searchDom.modeDe.classList.add("active");
+    searchDom.modeEn.classList.remove("active");
+    searchDom.input.placeholder = "Deutsches Wort eingeben...";
+    performSearch(searchDom.input.value);
+});
+searchDom.modeEn.addEventListener("click", () => {
+    searchMode = "en";
+    searchDom.modeEn.classList.add("active");
+    searchDom.modeDe.classList.remove("active");
+    searchDom.input.placeholder = "English word eingeben...";
+    performSearch(searchDom.input.value);
+});
+
+// Navigation
+searchDom.openBtn.addEventListener("click", () => {
+    showScreen(searchDom.screen);
+    setTimeout(() => searchDom.input.focus(), 100);
+});
+searchDom.backBtn.addEventListener("click", () => {
+    showScreen(dom.startScreen);
+});
+
+/* ===========================
    INIT
    =========================== */
 createParticles();
